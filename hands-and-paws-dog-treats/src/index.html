@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands and Paws</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #87ceeb;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #add8e6;
+        }
+        .hero img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        .section {
+            padding: 20px;
+            text-align: center;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-container form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container label {
+            display: block;
+            margin-top: 10px;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-container button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #87ceeb;
+            border: none;
+            color: #fff;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .footer {
+            background-color: #87ceeb;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Hands and Paws</h1>
+    <nav>
+        <a href="#home" aria-label="Home">Home</a>
+        <a href="#about" aria-label="About">About</a>
+        <a href="#order" aria-label="Order">Order</a>
+        <a href="#ingredients" aria-label="Ingredients">Ingredients</a>
+        <a href="#contact" aria-label="Contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h2>Welcome to Hands and Paws!</h2>
+    <img src="https://image.petmd.com/files/inline-images/golden-retriever-2.jpg?VersionId=9HAclc1bWh8XvyNoGi2.UxpdEp1gygb_" alt="Golden Retriever with dog treats">
+    <p>Homemade Dog Treats for Your Furry Friends</p>
+    <a href="#order"><button>Order Now</button></a>
+</section>
+
+<section class="section" id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Grayson Roth, and I'm 12 years old. At Hands and Paws, I make delicious dog treats right here in Prairie Village, KS. My treats are made with love and are perfect for your furry friends!</p>
+</section>
+
+<section class="section" id="order">
+    <h2>My Treats</h2>
+    <p><strong>Treats by the Dozen:</strong> $6 per dozen. Perfect for spoiling your pup!</p>
+    <p><strong>Jumbo Personalized Treats:</strong> $3 each. Add your dog’s name for a special touch!</p>
+    <img src="https://i.postimg.cc/k5CwR1Pw/133123-Peanut-Butter-and-Pumpkin-Dog-Treats-mfs-018-1-ad40545a341b4238baf99d90089dfde3.jpg" alt="Various dog treats including peanut butter and pumpkin flavored treats" width="300" height="auto">
+    <p>Don't worry about the payment method just yet! After you place your order, I'll send you a confirmation text with all the payment details.</p>
+</section>
+
+<section class="form-container" id="place-order">
+    <h2>Place Your Order</h2>
+    <form action="https://formspree.io/f/xdknvlzj" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="treats">Type of Treats:</label>
+        <p>Dozen Treats: $6 per dozen</p>
+        <input type="number" id="dozen" name="dozen" min="0" placeholder="Quantity">
+        
+        <p>Jumbo Personalized Treats: $3 each</p>
+        <input type="number" id="jumbo" name="jumbo" min="0" placeholder="Quantity">
+        
+        <label for="personalization">Personalization Details:</label>
+        <input type="text" id="personalization" name="personalization" placeholder="Enter name for jumbo treats">
+        
+        <label for="address">Delivery Address:</label>
+        <input type="text" id="address" name="address" required>
+        
+        <button type="submit">Send Order</button>
+    </form>
+</section>
+
+<section class="form-container" id="contact">
+    <h2>Get in Touch</h2>
+    <form action="https://formspree.io/f/xdknvlzj" method="POST">
+        <label for="contact-name">Name:</label>
+        <input type="text" id="contact-name" name="contact-name" required>
+        
+        <label for="contact-email">Email Address:</label>
+        <input type="email" id="contact-email" name="contact-email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required placeholder="Your message here..."></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<section class="section" id="ingredients">
+    <h2>Ingredients</h2>
+    <p>Our treats are made with all-natural, dog-friendly ingredients:</p>
+    <ul>
+        <li>Whole Wheat Flour</li>
+        <li>Peanut Butter</li>
+        <li>Canned Pumpkin</li>
+        <li>Ground Cinnamon</li>
+        <li>Eggs</li>
+        <li>Salt</li>
+        <li>Water</li>
+    </ul>
+    <p>No artificial preservatives, flavors, or colors!</p>
+</section>
+
+<footer class="footer">
+    <p>Contact us at: grayson.roth0811@gmail.com | Phone: 913-948-0197</p>
+    <p>Delivery area: Prairie Village, KS and nearby areas</p>
+</footer>
+
+</body>
+</html>
